@@ -1,0 +1,16 @@
+{% extends 'myapp/base.html' %}
+
+{% block title %} Title {% endblock %}
+
+{% block content %}
+    {{ article.description }}<br>
+    {{ article.count_views }}<br>
+    {% if comments %}
+        {% for comment in comments %}
+            {{ comment.description }}<br>
+            {% if comment.create_at != comment.change_at %}
+              <p>изменено</p>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endblock %}

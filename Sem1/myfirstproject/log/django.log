@@ -1,0 +1,114 @@
+INFO 2024-03-24 23:38:51,627 autoreload 6616 9784 Watching for file changes with StatReloader
+WARNING 2024-03-24 23:38:55,168 log 6616 10232 Not Found: /
+WARNING 2024-03-24 23:38:55,192 basehttp 6616 10232 "GET / HTTP/1.1" 404 2278
+INFO 2024-03-24 23:39:06,462 basehttp 6616 10232 "GET /about HTTP/1.1" 301 0
+INFO 2024-03-24 23:39:06,467 basehttp 6616 12164 "GET /about/ HTTP/1.1" 200 68
+INFO 2024-03-24 23:39:28,943 autoreload 6616 9784 E:\Study_Program\Django\Sem1\myfirstproject\myapp\urls.py changed, reloading.
+INFO 2024-03-24 23:39:30,040 autoreload 3880 11100 Watching for file changes with StatReloader
+INFO 2024-03-24 23:42:18,790 autoreload 3880 11100 E:\Study_Program\Django\Sem1\myfirstproject\myapp\urls.py changed, reloading.
+INFO 2024-03-24 23:42:19,828 autoreload 3116 10376 Watching for file changes with StatReloader
+INFO 2024-03-24 23:44:07,364 autoreload 3116 10376 E:\Study_Program\Django\Sem1\myfirstproject\myapp\views.py changed, reloading.
+INFO 2024-03-24 23:44:08,455 autoreload 9836 4716 Watching for file changes with StatReloader
+INFO 2024-03-24 23:44:16,655 autoreload 9836 4716 E:\Study_Program\Django\Sem1\myfirstproject\myapp\views.py changed, reloading.
+INFO 2024-03-24 23:44:17,639 autoreload 8288 1100 Watching for file changes with StatReloader
+INFO 2024-03-24 23:44:34,671 autoreload 8288 1100 E:\Study_Program\Django\Sem1\myfirstproject\myapp\views.py changed, reloading.
+INFO 2024-03-24 23:45:26,162 autoreload 2568 5672 Watching for file changes with StatReloader
+ERROR 2024-03-24 23:45:29,170 log 2568 7768 Internal Server Error: /about/
+Traceback (most recent call last):
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\Study_Program\Django\Sem1\myfirstproject\myapp\views.py", line 13, in index
+    return render(request, 'myapp/index.html', context=context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: myapp/index.html
+ERROR 2024-03-24 23:45:29,174 basehttp 2568 7768 "GET /about/ HTTP/1.1" 500 80294
+WARNING 2024-03-24 23:45:33,410 log 2568 7768 Not Found: /
+WARNING 2024-03-24 23:45:33,410 basehttp 2568 7768 "GET / HTTP/1.1" 404 2278
+ERROR 2024-03-24 23:45:44,686 log 2568 7768 Internal Server Error: /about/
+Traceback (most recent call last):
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\Study_Program\Django\Sem1\myfirstproject\myapp\views.py", line 13, in index
+    return render(request, 'myapp/index.html', context=context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: myapp/index.html
+ERROR 2024-03-24 23:45:44,688 basehttp 2568 7768 "GET /about/ HTTP/1.1" 500 80157
+WARNING 2024-03-24 23:46:17,089 log 2568 7768 Not Found: /
+WARNING 2024-03-24 23:46:17,090 basehttp 2568 7768 "GET / HTTP/1.1" 404 2278
+INFO 2024-03-24 23:46:46,621 basehttp 2568 7768 "GET /about/about HTTP/1.1" 301 0
+INFO 2024-03-24 23:46:46,625 views 2568 2784 Показана информация: <h1>Это страница обо мне</h1><p>Меня зовут Сергей. Я хочу стать программистом. Для этого постоянно получаю новые знания и пишу код. </p>
+INFO 2024-03-24 23:46:46,626 basehttp 2568 2784 "GET /about/about/ HTTP/1.1" 200 234
+INFO 2024-03-24 23:47:53,383 autoreload 2568 5672 E:\Study_Program\Django\Sem1\myfirstproject\myapp\views.py changed, reloading.
+INFO 2024-03-24 23:48:00,761 autoreload 5676 3960 Watching for file changes with StatReloader
+INFO 2024-03-24 23:48:02,796 views 5676 2940 Показана информация: <h1>Это страница обо мне</h1>
+INFO 2024-03-24 23:48:02,797 basehttp 5676 2940 "GET /about/about/ HTTP/1.1" 200 46
+INFO 2024-03-24 23:48:07,396 basehttp 5676 2940 "GET /about/main HTTP/1.1" 301 0
+ERROR 2024-03-24 23:48:07,457 log 5676 7260 Internal Server Error: /about/main/
+Traceback (most recent call last):
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\Study_Program\Django\Sem1\myfirstproject\myapp\views.py", line 13, in index
+    return render(request, 'myapp/index.html', context=context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: myapp/index.html
+ERROR 2024-03-24 23:48:07,459 basehttp 5676 7260 "GET /about/main/ HTTP/1.1" 500 80021
+INFO 2024-03-24 23:49:38,387 autoreload 8648 10612 Watching for file changes with StatReloader
+ERROR 2024-03-24 23:49:40,803 log 8648 9596 Internal Server Error: /about/main/
+Traceback (most recent call last):
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\Study_Program\Django\Sem1\myfirstproject\myapp\views.py", line 13, in index
+    return render(request, 'myapp/index.html', context=context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: myapp/index.html
+ERROR 2024-03-24 23:49:40,806 basehttp 8648 9596 "GET /about/main/ HTTP/1.1" 500 80158
+WARNING 2024-03-24 23:49:44,368 log 8648 9596 Not Found: /about/
+WARNING 2024-03-24 23:49:44,370 basehttp 8648 9596 "GET /about/ HTTP/1.1" 404 2553
+WARNING 2024-03-24 23:49:57,010 log 8648 9596 Not Found: /about/ main/
+WARNING 2024-03-24 23:49:57,011 basehttp 8648 9596 "GET /about/%20main/ HTTP/1.1" 404 2573
+ERROR 2024-03-24 23:50:01,203 log 8648 9596 Internal Server Error: /about/main/
+Traceback (most recent call last):
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\Study_Program\Django\Sem1\myfirstproject\myapp\views.py", line 13, in index
+    return render(request, 'myapp/index.html', context=context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: myapp/index.html
+ERROR 2024-03-24 23:50:01,206 basehttp 8648 9596 "GET /about/main/ HTTP/1.1" 500 80021
+INFO 2024-03-24 23:50:07,776 views 8648 9596 Показана информация: <h1>Это страница обо мне</h1>
+INFO 2024-03-24 23:50:07,777 basehttp 8648 9596 "GET /about/about/ HTTP/1.1" 200 46
