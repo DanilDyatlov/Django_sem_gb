@@ -112,3 +112,649 @@ django.template.exceptions.TemplateDoesNotExist: myapp/index.html
 ERROR 2024-03-24 23:50:01,206 basehttp 8648 9596 "GET /about/main/ HTTP/1.1" 500 80021
 INFO 2024-03-24 23:50:07,776 views 8648 9596 Показана информация: <h1>Это страница обо мне</h1>
 INFO 2024-03-24 23:50:07,777 basehttp 8648 9596 "GET /about/about/ HTTP/1.1" 200 46
+INFO 2024-03-25 20:02:51,980 autoreload 4624 936 Watching for file changes with StatReloader
+WARNING 2024-03-25 20:02:54,263 log 4624 12176 Not Found: /
+WARNING 2024-03-25 20:02:54,264 basehttp 4624 12176 "GET / HTTP/1.1" 404 2278
+WARNING 2024-03-25 20:02:54,626 log 4624 12176 Not Found: /favicon.ico
+WARNING 2024-03-25 20:02:54,628 basehttp 4624 12176 "GET /favicon.ico HTTP/1.1" 404 2329
+WARNING 2024-03-25 20:03:16,869 log 4624 12176 Not Found: /main
+WARNING 2024-03-25 20:03:16,871 basehttp 4624 12176 "GET /main HTTP/1.1" 404 2308
+WARNING 2024-03-25 20:03:40,499 log 4624 12176 Not Found: /main/
+WARNING 2024-03-25 20:03:40,500 basehttp 4624 12176 "GET /main/ HTTP/1.1" 404 2311
+WARNING 2024-03-25 20:03:46,391 log 4624 12176 Not Found: /about/
+WARNING 2024-03-25 20:03:46,391 basehttp 4624 12176 "GET /about/ HTTP/1.1" 404 2553
+ERROR 2024-03-25 20:03:51,699 log 4624 12176 Internal Server Error: /about/main/
+Traceback (most recent call last):
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: myapp/base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\Study_Program\Django\Sem1\myfirstproject\myapp\views.py", line 13, in index
+    return render(request, 'index.html', context=context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: myapp/base.html
+ERROR 2024-03-25 20:03:51,705 basehttp 4624 12176 "GET /about/main/ HTTP/1.1" 500 130006
+INFO 2024-03-25 20:04:16,435 views 4624 12176 Показана информация: <h1>Это страница обо мне</h1>
+INFO 2024-03-25 20:04:16,436 basehttp 4624 12176 "GET /about/about/ HTTP/1.1" 200 46
+INFO 2024-03-25 20:04:19,627 views 4624 12176 Показана информация: <h1>Это страница обо мне</h1>
+INFO 2024-03-25 20:04:19,628 basehttp 4624 12176 "GET /about/about/ HTTP/1.1" 200 46
+ERROR 2024-03-25 20:04:22,001 log 4624 12176 Internal Server Error: /about/main/
+Traceback (most recent call last):
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: myapp/base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\Study_Program\Django\Sem1\myfirstproject\myapp\views.py", line 13, in index
+    return render(request, 'index.html', context=context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: myapp/base.html
+ERROR 2024-03-25 20:04:22,004 basehttp 4624 12176 "GET /about/main/ HTTP/1.1" 500 130006
+INFO 2024-03-25 20:06:08,116 autoreload 4368 10456 Watching for file changes with StatReloader
+WARNING 2024-03-25 20:06:10,867 log 4368 1056 Not Found: /about/main/
+WARNING 2024-03-25 20:06:10,868 basehttp 4368 1056 "GET /about/main/ HTTP/1.1" 404 2563
+WARNING 2024-03-25 20:06:13,562 log 4368 1056 Not Found: /about/main/
+WARNING 2024-03-25 20:06:13,563 basehttp 4368 1056 "GET /about/main/ HTTP/1.1" 404 2563
+ERROR 2024-03-25 20:06:14,929 log 4368 1056 Internal Server Error: /about/
+Traceback (most recent call last):
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: myapp/base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\Study_Program\Django\Sem1\myfirstproject\myapp\views.py", line 13, in index
+    return render(request, 'index.html', context=context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: myapp/base.html
+ERROR 2024-03-25 20:06:14,934 basehttp 4368 1056 "GET /about/ HTTP/1.1" 500 129936
+INFO 2024-03-25 20:06:31,679 autoreload 4368 10456 E:\Study_Program\Django\Sem1\myfirstproject\myapp\urls.py changed, reloading.
+INFO 2024-03-25 20:06:34,387 autoreload 2884 11688 Watching for file changes with StatReloader
+INFO 2024-03-25 20:10:04,875 autoreload 4536 7768 Watching for file changes with StatReloader
+WARNING 2024-03-25 20:10:06,570 log 4536 9008 Not Found: /
+WARNING 2024-03-25 20:10:06,574 basehttp 4536 9008 "GET / HTTP/1.1" 404 2278
+WARNING 2024-03-25 20:10:15,528 log 4536 9008 Not Found: /myapp
+WARNING 2024-03-25 20:10:15,529 basehttp 4536 9008 "GET /myapp HTTP/1.1" 404 2311
+WARNING 2024-03-25 20:10:27,538 log 4536 9008 Not Found: /myapp/index
+WARNING 2024-03-25 20:10:27,539 basehttp 4536 9008 "GET /myapp/index HTTP/1.1" 404 2568
+INFO 2024-03-25 20:10:32,693 basehttp 4536 9008 "GET /myapp/main HTTP/1.1" 301 0
+INFO 2024-03-25 20:10:32,704 basehttp 4536 7360 "GET /myapp/main/ HTTP/1.1" 200 337
+INFO 2024-03-25 20:14:39,446 autoreload 4060 12132 Watching for file changes with StatReloader
+WARNING 2024-03-25 20:14:43,169 log 4060 9956 Not Found: /myapp/main/
+WARNING 2024-03-25 20:14:43,169 basehttp 4060 9956 "GET /myapp/main/ HTTP/1.1" 404 2570
+ERROR 2024-03-25 20:14:56,586 log 4060 9956 Internal Server Error: /myapp/^main/
+Traceback (most recent call last):
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: myapp/base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\Study_Program\Django\Sem1\myfirstproject\myapp\views.py", line 13, in index
+    return render(request, 'index.html', context=context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: myapp/base.html
+ERROR 2024-03-25 20:14:56,591 basehttp 4060 9956 "GET /myapp/%5Emain/ HTTP/1.1" 500 130038
+INFO 2024-03-25 20:18:46,170 autoreload 5352 4476 Watching for file changes with StatReloader
+WARNING 2024-03-25 20:18:49,140 log 5352 2936 Not Found: /myapp/main/
+WARNING 2024-03-25 20:18:49,141 basehttp 5352 2936 "GET /myapp/main/ HTTP/1.1" 404 2570
+ERROR 2024-03-25 20:18:55,669 log 5352 2936 Internal Server Error: /myapp/^main/
+Traceback (most recent call last):
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: myapp/base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\Study_Program\Django\Sem1\myfirstproject\myapp\views.py", line 13, in index
+    return render(request, 'index.html', context=context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: myapp/base.html
+ERROR 2024-03-25 20:18:55,674 basehttp 5352 2936 "GET /myapp/%5Emain/ HTTP/1.1" 500 130038
+INFO 2024-03-25 20:19:26,951 autoreload 4920 11872 Watching for file changes with StatReloader
+ERROR 2024-03-25 20:19:33,125 log 4920 8244 Internal Server Error: /myapp/main/
+Traceback (most recent call last):
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: myapp/base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\Study_Program\Django\Sem1\myfirstproject\myapp\views.py", line 13, in index
+    return render(request, 'index.html', context=context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: myapp/base.html
+ERROR 2024-03-25 20:19:33,130 basehttp 4920 8244 "GET /myapp/main/ HTTP/1.1" 500 130006
+INFO 2024-03-25 20:20:45,996 autoreload 9552 7996 Watching for file changes with StatReloader
+INFO 2024-03-25 20:21:18,629 autoreload 5960 6724 Watching for file changes with StatReloader
+ERROR 2024-03-25 20:21:22,076 log 5960 9616 Internal Server Error: /myapp/main/
+Traceback (most recent call last):
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: myapp/base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\Study_Program\Django\Sem1\myfirstproject\myapp\views.py", line 13, in index
+    return render(request, 'index.html', context=context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: myapp/base.html
+ERROR 2024-03-25 20:21:22,081 basehttp 5960 9616 "GET /myapp/main/ HTTP/1.1" 500 130143
+ERROR 2024-03-25 20:21:23,063 log 5960 9616 Internal Server Error: /myapp/main/
+Traceback (most recent call last):
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: myapp/base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\Study_Program\Django\Sem1\myfirstproject\myapp\views.py", line 13, in index
+    return render(request, 'index.html', context=context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: myapp/base.html
+ERROR 2024-03-25 20:21:23,067 basehttp 5960 9616 "GET /myapp/main/ HTTP/1.1" 500 130143
+ERROR 2024-03-25 20:21:23,944 log 5960 9616 Internal Server Error: /myapp/main/
+Traceback (most recent call last):
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: myapp/base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\Study_Program\Django\Sem1\myfirstproject\myapp\views.py", line 13, in index
+    return render(request, 'index.html', context=context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: myapp/base.html
+ERROR 2024-03-25 20:21:23,949 basehttp 5960 9616 "GET /myapp/main/ HTTP/1.1" 500 130143
+WARNING 2024-03-25 20:21:27,161 log 5960 9616 Not Found: /myapp/
+WARNING 2024-03-25 20:21:27,162 basehttp 5960 9616 "GET /myapp/ HTTP/1.1" 404 2553
+INFO 2024-03-25 20:21:34,855 basehttp 5960 9616 "GET /myapp/about HTTP/1.1" 301 0
+INFO 2024-03-25 20:21:34,860 views 5960 3844 Показана информация: <h1>Это страница обо мне</h1>
+INFO 2024-03-25 20:21:34,861 basehttp 5960 3844 "GET /myapp/about/ HTTP/1.1" 200 46
+WARNING 2024-03-25 20:21:40,086 log 5960 3844 Not Found: /myapp/index
+WARNING 2024-03-25 20:21:40,087 basehttp 5960 3844 "GET /myapp/index HTTP/1.1" 404 2568
+ERROR 2024-03-25 20:21:46,446 log 5960 3844 Internal Server Error: /myapp/main/
+Traceback (most recent call last):
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: myapp/base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\Study_Program\Django\Sem1\myfirstproject\myapp\views.py", line 13, in index
+    return render(request, 'index.html', context=context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: myapp/base.html
+ERROR 2024-03-25 20:21:46,449 basehttp 5960 3844 "GET /myapp/main/ HTTP/1.1" 500 130006
+WARNING 2024-03-25 20:22:15,234 log 5960 3844 Not Found: /mфшт
+WARNING 2024-03-25 20:22:15,235 basehttp 5960 3844 "GET /m%D1%84%D1%88%D1%82 HTTP/1.1" 404 2329
+WARNING 2024-03-25 20:22:18,764 log 5960 3844 Not Found: /main
+WARNING 2024-03-25 20:22:18,766 basehttp 5960 3844 "GET /main HTTP/1.1" 404 2308
+ERROR 2024-03-25 20:22:48,256 log 5960 3844 Internal Server Error: /myapp/main/
+Traceback (most recent call last):
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: myapp/base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\Study_Program\Django\Sem1\myfirstproject\myapp\views.py", line 13, in index
+    return render(request, 'index.html', context=context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: myapp/base.html
+ERROR 2024-03-25 20:22:48,260 basehttp 5960 3844 "GET /myapp/main/ HTTP/1.1" 500 130006
+INFO 2024-03-25 20:31:51,472 autoreload 5076 3112 Watching for file changes with StatReloader
+INFO 2024-03-25 20:31:54,576 basehttp 5076 1396 "GET /myapp/main/ HTTP/1.1" 200 326
+INFO 2024-03-25 20:31:58,964 basehttp 5076 1396 "GET /myapp/main/ HTTP/1.1" 200 326
+INFO 2024-03-25 20:33:55,618 basehttp 5076 1396 - Broken pipe from ('127.0.0.1', 52169)
+INFO 2024-03-25 20:42:11,363 autoreload 8996 11300 Watching for file changes with StatReloader
+ERROR 2024-03-25 20:42:16,539 log 8996 7444 Internal Server Error: /myapp/main/
+Traceback (most recent call last):
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 502, in parse
+    compile_func = self.tags[command]
+KeyError: 'endfor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\Study_Program\Django\Sem1\myfirstproject\myapp\views.py", line 13, in index
+    return render(request, 'index.html', context=context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 504, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 555, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 7: 'endfor', expected 'endblock'. Did you forget to register or load this tag?
+ERROR 2024-03-25 20:42:16,546 basehttp 8996 7444 "GET /myapp/main/ HTTP/1.1" 500 159365
+WARNING 2024-03-25 20:42:16,988 log 8996 7444 Not Found: /favicon.ico
+WARNING 2024-03-25 20:42:16,989 basehttp 8996 7444 "GET /favicon.ico HTTP/1.1" 404 2329
+INFO 2024-03-25 20:42:59,866 autoreload 6876 8120 Watching for file changes with StatReloader
+INFO 2024-03-25 20:43:02,702 basehttp 6876 8004 "GET /myapp/main/ HTTP/1.1" 200 333
+INFO 2024-03-25 20:44:38,125 autoreload 1632 5776 Watching for file changes with StatReloader
+INFO 2024-03-25 20:44:41,648 basehttp 1632 1844 "GET /myapp/main/ HTTP/1.1" 200 337
+INFO 2024-03-25 20:44:42,236 basehttp 1632 1844 "GET /myapp/main/ HTTP/1.1" 200 337
+INFO 2024-03-25 20:45:26,591 autoreload 4344 7876 Watching for file changes with StatReloader
+INFO 2024-03-25 20:45:28,990 basehttp 4344 11028 "GET /myapp/main/ HTTP/1.1" 200 528
+INFO 2024-03-25 20:50:06,830 autoreload 3460 12228 Watching for file changes with StatReloader
+INFO 2024-03-25 20:50:09,323 basehttp 3460 6896 "GET /myapp/main/ HTTP/1.1" 200 567
+INFO 2024-03-25 20:51:09,453 autoreload 3460 12228 E:\Study_Program\Django\Sem1\myfirstproject\myapp\views.py changed, reloading.
+INFO 2024-03-25 20:51:11,342 autoreload 8016 1312 Watching for file changes with StatReloader
+INFO 2024-03-25 20:53:48,763 autoreload 4008 9280 Watching for file changes with StatReloader
+WARNING 2024-03-25 20:53:52,432 log 4008 1620 Not Found: /
+WARNING 2024-03-25 20:53:52,433 basehttp 4008 1620 "GET / HTTP/1.1" 404 2278
+ERROR 2024-03-25 20:54:03,185 log 4008 1620 Internal Server Error: /myapp/main/
+Traceback (most recent call last):
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 502, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\Study_Program\Django\Sem1\myfirstproject\myapp\views.py", line 13, in index
+    return render(request, 'index.html', context=context)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 504, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "E:\Study_Program\Django\Sem1\venv\lib\site-packages\django\template\base.py", line 565, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 14: 'static'. Did you forget to register or load this tag?
+ERROR 2024-03-25 20:54:03,193 basehttp 4008 1620 "GET /myapp/main/ HTTP/1.1" 500 157130
+INFO 2024-03-25 20:54:29,670 basehttp 4008 1620 "GET /myapp/main/ HTTP/1.1" 200 429
