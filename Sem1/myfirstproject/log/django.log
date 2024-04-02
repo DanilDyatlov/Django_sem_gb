@@ -758,3 +758,13 @@ Traceback (most recent call last):
 django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 14: 'static'. Did you forget to register or load this tag?
 ERROR 2024-03-25 20:54:03,193 basehttp 4008 1620 "GET /myapp/main/ HTTP/1.1" 500 157130
 INFO 2024-03-25 20:54:29,670 basehttp 4008 1620 "GET /myapp/main/ HTTP/1.1" 200 429
+INFO 2024-03-30 23:23:09,351 autoreload 11932 1664 Watching for file changes with StatReloader
+INFO 2024-03-30 23:26:41,353 autoreload 9740 10600 Watching for file changes with StatReloader
+INFO 2024-03-30 23:27:54,777 autoreload 7448 11928 Watching for file changes with StatReloader
+INFO 2024-03-30 23:48:58,336 autoreload 10188 8316 Watching for file changes with StatReloader
+INFO 2024-03-30 23:49:59,462 autoreload 11632 9324 Watching for file changes with StatReloader
+INFO 2024-03-30 23:53:39,287 autoreload 11092 5504 Watching for file changes with StatReloader
+INFO 2024-03-30 23:59:47,332 autoreload 6044 3296 Watching for file changes with StatReloader
+INFO 2024-03-31 18:50:19,320 autoreload 3156 8924 Watching for file changes with StatReloader
+INFO 2024-03-31 18:51:28,380 autoreload 7064 5596 Watching for file changes with StatReloader
+INFO 2024-03-31 19:14:21,024 autoreload 8516 3852 Watching for file changes with StatReloader
