@@ -1,0 +1,13 @@
+{% extends 's3_app1_app/base.html' %}
+
+{% block title %}Мой сайт{% endblock %}
+
+{% block content %}
+    <h1>Приветствую!</h1>
+    <p>Это главная страница</p>
+
+    <h2>Меню</h2>
+    <p><a href="{% url 'index' %}">Главная</a></p>
+    <p><a href="{% url 'about' %}">О нас</a></p>
+
+{% endblock %}

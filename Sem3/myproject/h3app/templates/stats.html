@@ -1,0 +1,28 @@
+{% extends 'h3app/base.html' %}
+
+{% block title %}Статистика{% endblock %}
+
+{% block content %}
+    <h2>Статистика клиента {{ customer.username }} </h2>
+    {% for scope, products in scope_dict.items %}
+        <h4> Диапазон дней: {{ scope }} </h4>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Товар</th>
+                        <th>Цена</th>
+                    </tr>
+                </thead>
+            {% for product in products %}
+                <tbody>
+                    <tr>
+                        <td> {{ forloop.counter }} </td>
+                        <td> {{ product.title }} </td>
+                        <td> {{ product.price }} </td>
+                    </tr>
+            {% endfor%}
+                </tbody>
+            </table>
+    {% endfor %}
+{% endblock %}

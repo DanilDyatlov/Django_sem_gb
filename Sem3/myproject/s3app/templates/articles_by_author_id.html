@@ -1,0 +1,18 @@
+{% extends 's3_app3_article_app/base.html' %}
+
+{% block title %}Автор id{% endblock %}
+
+{% block content %}
+    <h2>Статьи автора {{ author.firstname }} {{ author.lastname }}</h2>
+
+    {% for article in articles %}
+
+        {% if article.is_published %}
+            <p><a href="{% url 'article_by_id' article.id %}">{{ article.title }}</a></p>
+        {% else %}
+            <p>{{ article.title }}</p>
+        {% endif %}
+
+    {% endfor %}
+
+{% endblock %}

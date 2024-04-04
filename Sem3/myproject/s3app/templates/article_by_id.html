@@ -1,0 +1,24 @@
+{% extends 's3_app3_article_app/base.html' %}
+
+{% block title %}Автор id{% endblock %}
+
+{% block content %}
+    <h2>Статья {{article.title}} </h2>
+
+    <p>{{article.content}}</p>
+
+    <h3>Комментарии</h3>
+    {% for comment in comments %}
+    <p>
+        <div>{{comment.content}}</div>
+        <div>Автор {{comment.author.full_name}},
+        {% if comment.time_stamp_create != comment.time_stamp_modify %}
+            Изменено: {{comment.time_stamp_modify}}
+        {% endif %}
+        </div>
+    </p>
+    {% endfor %}
+
+    <p><a href="{% url 'articles_by_author_id' article.author.id %}">
+        К списку статей автора {{ article.author.full_name }}</a></p>
+{% endblock %}
