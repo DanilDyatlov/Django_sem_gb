@@ -1,0 +1,11 @@
+<h3>Комментарии</h3>
+{% for comment in comments %}
+<p>
+<div>{{ comment.content }}</div>
+<div>Автор {{ comment.author.full_name }},
+    {% if comment.time_stamp_create != comment.time_stamp_modify %}
+    Изменено: {{ comment.time_stamp_modify }}
+    {% endif %}
+</div>
+{% endfor %}
+</p>

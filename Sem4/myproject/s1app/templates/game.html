@@ -1,0 +1,28 @@
+{% extends 's1app/base.html' %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+
+    <form action="" method="post">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+        <input type="submit" value="Играть !">
+    </form>
+
+    {% if title %}
+        <hr>
+        <h3>{{ title }}</h3>
+            <table>
+                  <colgroup>
+                    <col span="2">
+                  </colgroup>
+                <tr><th>Попытка</th><th>Результат</th></tr>
+        {% for result in results %}
+                <tr><td>{{ forloop.counter }}</td><td>{{ result }}</td></tr>
+        {% endfor %}
+            </table>
+    {% endif %}
+
+{% endblock %}

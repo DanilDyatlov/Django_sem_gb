@@ -1,0 +1,18 @@
+{% extends 's2app/base.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <h2>Статья {{ article.title }} </h2>
+
+    <p>{{ article.content }}</p>
+
+    {% if form %}
+        {% include 's2app/form.html' %}
+    {% endif %}
+
+    {% include 's2app/comments.html' %}
+
+    <p><a href="{% url 'articles_by_author_id' article.author.id %}">
+        К списку статей автора {{ article.author.full_name }}</a></p>
+{% endblock %}

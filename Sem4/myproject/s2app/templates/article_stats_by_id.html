@@ -1,0 +1,15 @@
+{% extends 's2app/base.html' %}
+
+{% block title %}Автор id{% endblock %}
+
+{% block content %}
+
+    <h2>Статья {{ article.title }} </h2>
+    <p>Создание: {{ article.time_stamp }}</p>
+    <p>Автор: {{ article.author.full_name }}, id: {{ article.author.pk }}</p>
+    <p>Категория: {{ article.category }}</p>
+    <p>Просмотры: {{ article.views }}</p>
+    <p>Опубликована: {{ article.is_published }}</p>
+    <hr>
+    <p>Содержание: {{ article.content }}</p>
+{% endblock %}

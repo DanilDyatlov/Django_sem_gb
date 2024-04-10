@@ -1,0 +1,29 @@
+{% extends 'h4app/base.html' %}
+
+{% block title %}Заказы{% endblock %}
+
+{% block content %}
+    <h2>Заказы клиента {{ customer.username }} </h2>
+    {% for order in orders %}
+        <h4> Номер заказа {{ order.id }} </h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Товар</th>
+                        <th>Цена</th>
+                    </tr>
+                </thead>
+            {% for product in order.products.all %}
+                <tbody>
+                    <tr>
+                        <td> {{ forloop.counter }} </td>
+                        <td> {{ product.title }} </td>
+                        <td> {{ product.price }} </td>
+                    </tr>
+            {% endfor%}
+                </tbody>
+            </table>
+            <p> Сумма: {{ order.total }} </p>
+    {% endfor %}
+{% endblock %}
