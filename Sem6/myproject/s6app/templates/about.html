@@ -1,0 +1,12 @@
+{% extends 'h3app/base.html' %}
+
+{% block title %}Обо мне{% endblock %}
+
+{% block content %}
+    <h1>О нас</h1>
+
+    <h2>Меню</h2>
+    <p><a href="{% url 'index' %}">Главная</a></p>
+    <p><a href="{% url 'about' %}">О нас</a></p>
+
+{% endblock %}
